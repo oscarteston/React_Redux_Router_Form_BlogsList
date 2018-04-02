@@ -8,6 +8,7 @@ import promise from 'redux-promise';
 import reducers from './reducers'; 
 import PostIndex from './components/post_index';
 import PostsNew from './components/post_new';
+import PostsShow from './components/post_show';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -21,8 +22,8 @@ ReactDOM.render(
       <div>
         <Switch>
           <Route path="/posts/new" component={PostsNew}/>
+          <Route path="/posts/:id" component={PostsShow}/>
           <Route path="/" component={PostIndex}/>
-        {/* <Route path="/posts/:id" component={PostsShow}/> */}
         </Switch>
       </div>
     </BrowserRouter>
